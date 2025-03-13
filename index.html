@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dart Game - Local Multiplayer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="start-screen">
+            <h1>Dart Game</h1>
+            <p>Place your bet before you start!</p>
+            <label for="player1-bet">Player 1 Bet:</label>
+            <input type="number" id="player1-bet" min="1" value="10">
+            <label for="player2-bet">Player 2 Bet:</label>
+            <input type="number" id="player2-bet" min="1" value="10">
+            <button id="start-game-btn">Start Game</button>
+        </div>
+
+        <div id="game-screen" style="display: none;">
+            <h2>Throw the Dart!</h2>
+            <div id="dartboard">
+                <p id="dart-message">Click to throw a dart!</p>
+                <button id="throw-dart-btn">Throw Dart</button>
+            </div>
+            <p id="turn-message"></p>
+        </div>
+
+        <div id="result-screen" style="display: none;">
+            <h2>Game Over!</h2>
+            <p>Player 1 Score: <span id="player1-score">0</span></p>
+            <p>Player 2 Score: <span id="player2-score">0</span></p>
+            <p id="winner-message"></p>
+            <button id="play-again-btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
